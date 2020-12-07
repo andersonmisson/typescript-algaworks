@@ -1,0 +1,21 @@
+class Funcionario {
+    constructor(nome, salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+    pagarImposto(taxa = 7.5) {
+        console.log(`${this.nome} Está pagando ${this.salario * taxa / 100} de imposto`);
+    }
+}
+class Secretario extends Funcionario {
+}
+class Executivo extends Funcionario {
+    pagarImposto(taxa = 27.5) {
+        console.log('Executivo paga mais!');
+        super.pagarImposto(taxa);
+    }
+}
+let sarah = new Secretario('Sarah', 2000);
+sarah.pagarImposto();
+let jorge = new Executivo('Jorge', 30000);
+jorge.pagarImposto();

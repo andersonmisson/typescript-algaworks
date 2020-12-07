@@ -1,6 +1,6 @@
-var quantidade = 20;
+let quantidade = 20;
 // quantidade = 'qualquer'; - não compila!
-var x = [1, 2, null];
+let x = [1, 2, null];
 // x[0] = true; -> Não compila!
 // Contextual Typing
 window.onmousedown = function (evento) {
